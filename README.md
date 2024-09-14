@@ -1,2 +1,2 @@
 # MPointers
-Library in C++
+Libreria en C++ para el manejo de punteros 
