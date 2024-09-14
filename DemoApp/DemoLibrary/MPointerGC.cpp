@@ -3,8 +3,11 @@
 #include <pthread.h>
 #include <thread>
 #include <chrono>
+#include <stdexcept>
+#include <mutex>
 
 MPointerGC* MPointerGC::instance = nullptr;
+std::mutex gcMutex;
 
 // Constructor privado
 MPointerGC::MPointerGC() : disposed(false), memoryIdAutoIncrement(0) {
@@ -19,49 +22,81 @@ MPointerGC::~MPointerGC() {
     }
 }
 
-// Método estático para obtener la instancia (Singleton)
 MPointerGC* MPointerGC::getInstance() {
     if (instance == nullptr) {
         instance = new MPointerGC();
 
         // Inicia el hilo de limpieza
         pthread_t cleanupThread;
-        pthread_create(&cleanupThread, nullptr, &cleanupLoop, nullptr);
+        if (pthread_create(&cleanupThread, nullptr, &cleanupLoop, nullptr) != 0) {
+            throw std::runtime_error("Failed to create cleanup thread.");
+        }
         pthread_detach(cleanupThread);
     }
     return instance;
 }
 
-int MPointerGC::registerMemory(void *memory) {
-    // Check if the memory is already registered
-    int existingId = memoryRegistry->getId(memory);
-    if (existingId != -1) {
-        // Memory already registered, return the existing ID
-        std::cout << "Memory already registered with ID: " << existingId << std::endl;
-        return existingId;
+int MPointerGC::registerMemory(void* memory) {
+    if (memoryRegistry->contains(memory)) {
+        std::cerr << "Memory is already registered!" << std::endl;
+        return memoryRegistry->getId(memory); // Return the existing ID if already registered
     }
-    // Register new memory
-    int id = memoryIdAutoIncrement++;
-    memoryRegistry->add(memory, id);
-    std::cout << "Memory registered with ID: " << id << std::endl;
-    return id;
+
+    int logicalAddress = memoryIdAutoIncrement++;
+    memoryRegistry->add(memory, logicalAddress);
+    return logicalAddress;
 }
 
 
-// Incrementar el conteo de referencias
+
 void MPointerGC::incrementRefCount(int logical_addr) {
+    std::cout << "Incrementing ref count for Logical Address: " << logical_addr << std::endl;
     memoryRegistry->incrementRefCount(logical_addr);
-    std::cout << "Incrementing reference count for address: " << logical_addr << std::endl;
 }
 
-// Decrementar el conteo de referencias
 void MPointerGC::decrementRefCount(int logical_addr) {
+    std::cout << "Decrementing ref count for Logical Address: " << logical_addr << std::endl;
     memoryRegistry->decrementRefCount(logical_addr);
-    std::cout << "Decrementing reference count for address: " << logical_addr << std::endl;
-    memoryRegistry->removeIfZeroReferences(logical_addr);
+
+    // Optionally clean up memory if the ref count hits zero
+    if (memoryRegistry->getRefCount(logical_addr) == 0) {
+        std::cout << "Memory at Logical Address " << logical_addr << " is being freed." << std::endl;
+        memoryRegistry->freeMemory(logical_addr);
+    }
+}
+int MemoryList::getRefCount(int logicalAddress) const {
+    std::lock_guard<std::mutex> lock(memoryListMutex);
+    MemoryNode* current = head;
+    while (current != nullptr) {
+        if (current->logicalAddress == logicalAddress) {
+            return current->referenceCount;
+        }
+        current = current->next;
+    }
+    std::cerr << "Memory with logical address " << logicalAddress << " not found!" << std::endl;
+    return -1;
+}
+void MemoryList::freeMemory(int logicalAddress) {
+    std::lock_guard<std::mutex> lock(memoryListMutex);
+    MemoryNode** current = &head;
+    while (*current != nullptr) {
+        if ((*current)->logicalAddress == logicalAddress) {
+            MemoryNode* toDelete = *current;
+            *current = (*current)->next;
+
+            delete static_cast<char*>(toDelete->memory);
+
+            delete toDelete;
+            std::cout << "Memory with logical address " << logicalAddress << " has been freed." << std::endl;
+            return;
+        }
+        current = &(*current)->next;
+    }
+    std::cerr << "Memory with logical address " << logicalAddress << " not found!" << std::endl;
 }
 
-// Función de limpieza en bucle (hilo)
+
+
 void* MPointerGC::cleanupLoop(void* arg) {
     MPointerGC* gc = MPointerGC::getInstance();
     while (!gc->disposed) {
@@ -72,8 +107,12 @@ void* MPointerGC::cleanupLoop(void* arg) {
     return nullptr;
 }
 
-// Método de depuración para imprimir el estado del recolector de basura
 void MPointerGC::debug() {
+    std::lock_guard<std::mutex> lock(gcMutex); // Lock para protección de datos
     std::cout << "Debugging MPointerGC..." << std::endl;
-    memoryRegistry->debug();
+    try {
+        memoryRegistry->debug();
+    } catch (...) {
+        std::cerr << "Failed to debug MPointerGC." << std::endl;
+    }
 }

@@ -152,14 +152,14 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "C:/Users/fmele/Downloads/DemoApp/DemoLibrary/CMakeLists.txt"
+			"path" : "C:/MPointer/MPointers/DemoApp/DemoLibrary/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "C:/Users/fmele/Downloads/DemoApp/DemoApp/cmake-build-debug",
-		"source" : "C:/Users/fmele/Downloads/DemoApp/DemoApp"
+		"build" : "C:/MPointer/MPointers/DemoApp/DemoApp/cmake-build-debug",
+		"source" : "C:/MPointer/MPointers/DemoApp/DemoApp"
 	},
 	"version" : 
 	{

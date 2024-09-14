@@ -6,9 +6,7 @@ set(CMAKE_CXX_STANDARD 20)
 add_subdirectory(../DemoLibrary ../../DemoLibrary/cmake-build-debug/)
 
 add_executable(DemoApp main.cpp
-        BubbleSort.cpp
         BubbleSort.h
-        InsertionSort.cpp
         InsertionSort.h
         LinkedList.h
         QuickSort.h

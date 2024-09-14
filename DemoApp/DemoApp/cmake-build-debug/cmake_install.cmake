@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/fmele/Downloads/DemoApp/DemoApp
+# Install script for directory: C:/MPointer/MPointers/DemoApp/DemoApp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug/cmake_install.cmake")
+  include("C:/MPointer/MPointers/DemoApp/DemoLibrary/cmake-build-debug/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/fmele/Downloads/DemoApp/DemoApp/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/MPointer/MPointers/DemoApp/DemoApp/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

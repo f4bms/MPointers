@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/fmele/Downloads/DemoApp/DemoApp/cmake-build-debug/
+cmake_ninja_workdir = C$:/MPointer/MPointers/DemoApp/DemoApp/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target DemoApp
 
@@ -49,24 +49,10 @@ cmake_ninja_workdir = C$:/Users/fmele/Downloads/DemoApp/DemoApp/cmake-build-debu
 
 build cmake_object_order_depends_target_DemoApp: phony || .
 
-build CMakeFiles/DemoApp.dir/main.cpp.obj: CXX_COMPILER__DemoApp_unscanned_Debug C$:/Users/fmele/Downloads/DemoApp/DemoApp/main.cpp || cmake_object_order_depends_target_DemoApp
+build CMakeFiles/DemoApp.dir/main.cpp.obj: CXX_COMPILER__DemoApp_unscanned_Debug C$:/MPointer/MPointers/DemoApp/DemoApp/main.cpp || cmake_object_order_depends_target_DemoApp
   DEP_FILE = CMakeFiles\DemoApp.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/fmele/Downloads/DemoApp/DemoApp/../DemoLibrary
-  OBJECT_DIR = CMakeFiles\DemoApp.dir
-  OBJECT_FILE_DIR = CMakeFiles\DemoApp.dir
-
-build CMakeFiles/DemoApp.dir/BubbleSort.cpp.obj: CXX_COMPILER__DemoApp_unscanned_Debug C$:/Users/fmele/Downloads/DemoApp/DemoApp/BubbleSort.cpp || cmake_object_order_depends_target_DemoApp
-  DEP_FILE = CMakeFiles\DemoApp.dir\BubbleSort.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/fmele/Downloads/DemoApp/DemoApp/../DemoLibrary
-  OBJECT_DIR = CMakeFiles\DemoApp.dir
-  OBJECT_FILE_DIR = CMakeFiles\DemoApp.dir
-
-build CMakeFiles/DemoApp.dir/InsertionSort.cpp.obj: CXX_COMPILER__DemoApp_unscanned_Debug C$:/Users/fmele/Downloads/DemoApp/DemoApp/InsertionSort.cpp || cmake_object_order_depends_target_DemoApp
-  DEP_FILE = CMakeFiles\DemoApp.dir\InsertionSort.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/fmele/Downloads/DemoApp/DemoApp/../DemoLibrary
+  INCLUDES = -IC:/MPointer/MPointers/DemoApp/DemoApp/../DemoLibrary
   OBJECT_DIR = CMakeFiles\DemoApp.dir
   OBJECT_FILE_DIR = CMakeFiles\DemoApp.dir
 
@@ -78,9 +64,9 @@ build CMakeFiles/DemoApp.dir/InsertionSort.cpp.obj: CXX_COMPILER__DemoApp_unscan
 #############################################
 # Link the executable DemoApp.exe
 
-build DemoApp.exe: CXX_EXECUTABLE_LINKER__DemoApp_Debug CMakeFiles/DemoApp.dir/main.cpp.obj CMakeFiles/DemoApp.dir/BubbleSort.cpp.obj CMakeFiles/DemoApp.dir/InsertionSort.cpp.obj | C$:/Users/fmele/Downloads/DemoApp/DemoApp/../DemoLibrary/cmake-build-debug/libDemoLibrary.a
+build DemoApp.exe: CXX_EXECUTABLE_LINKER__DemoApp_Debug CMakeFiles/DemoApp.dir/main.cpp.obj | C$:/MPointer/MPointers/DemoApp/DemoApp/../DemoLibrary/cmake-build-debug/libDemoLibrary.a
   FLAGS = -g
-  LINK_LIBRARIES = C:/Users/fmele/Downloads/DemoApp/DemoApp/../DemoLibrary/cmake-build-debug/libDemoLibrary.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = C:/MPointer/MPointers/DemoApp/DemoApp/../DemoLibrary/cmake-build-debug/libDemoLibrary.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\DemoApp.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -93,7 +79,7 @@ build DemoApp.exe: CXX_EXECUTABLE_LINKER__DemoApp_Debug CMakeFiles/DemoApp.dir/m
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\fmele\Downloads\DemoApp\DemoApp\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.2.0.1\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\MPointer\MPointers\DemoApp\DemoApp\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.2.0.1\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -104,7 +90,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\fmele\Downloads\DemoApp\DemoApp\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.2.0.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\fmele\Downloads\DemoApp\DemoApp -BC:\Users\fmele\Downloads\DemoApp\DemoApp\cmake-build-debug"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\MPointer\MPointers\DemoApp\DemoApp\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.2.0.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\MPointer\MPointers\DemoApp\DemoApp -BC:\MPointer\MPointers\DemoApp\DemoApp\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -113,7 +99,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/fmele/Downloads/DemoApp/DemoApp/CMakeLists.txt
+# C:/MPointer/MPointers/DemoApp/DemoApp/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -125,17 +111,17 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build cmake_object_order_depends_target_DemoLibrary: phony || .
 
-build C$:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug/CMakeFiles/DemoLibrary.dir/MPointerGC.cpp.obj: CXX_COMPILER__DemoLibrary_unscanned_Debug C$:/Users/fmele/Downloads/DemoApp/DemoLibrary/MPointerGC.cpp || cmake_object_order_depends_target_DemoLibrary
-  DEP_FILE = C:\Users\fmele\Downloads\DemoApp\DemoLibrary\cmake-build-debug\CMakeFiles\DemoLibrary.dir\MPointerGC.cpp.obj.d
+build C$:/MPointer/MPointers/DemoApp/DemoLibrary/cmake-build-debug/CMakeFiles/DemoLibrary.dir/MPointerGC.cpp.obj: CXX_COMPILER__DemoLibrary_unscanned_Debug C$:/MPointer/MPointers/DemoApp/DemoLibrary/MPointerGC.cpp || cmake_object_order_depends_target_DemoLibrary
+  DEP_FILE = C:\MPointer\MPointers\DemoApp\DemoLibrary\cmake-build-debug\CMakeFiles\DemoLibrary.dir\MPointerGC.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = C:\Users\fmele\Downloads\DemoApp\DemoLibrary\cmake-build-debug\CMakeFiles\DemoLibrary.dir
-  OBJECT_FILE_DIR = C:\Users\fmele\Downloads\DemoApp\DemoLibrary\cmake-build-debug\CMakeFiles\DemoLibrary.dir
+  OBJECT_DIR = C:\MPointer\MPointers\DemoApp\DemoLibrary\cmake-build-debug\CMakeFiles\DemoLibrary.dir
+  OBJECT_FILE_DIR = C:\MPointer\MPointers\DemoApp\DemoLibrary\cmake-build-debug\CMakeFiles\DemoLibrary.dir
 
-build C$:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug/CMakeFiles/DemoLibrary.dir/MemoryList.cpp.obj: CXX_COMPILER__DemoLibrary_unscanned_Debug C$:/Users/fmele/Downloads/DemoApp/DemoLibrary/MemoryList.cpp || cmake_object_order_depends_target_DemoLibrary
-  DEP_FILE = C:\Users\fmele\Downloads\DemoApp\DemoLibrary\cmake-build-debug\CMakeFiles\DemoLibrary.dir\MemoryList.cpp.obj.d
+build C$:/MPointer/MPointers/DemoApp/DemoLibrary/cmake-build-debug/CMakeFiles/DemoLibrary.dir/MemoryList.cpp.obj: CXX_COMPILER__DemoLibrary_unscanned_Debug C$:/MPointer/MPointers/DemoApp/DemoLibrary/MemoryList.cpp || cmake_object_order_depends_target_DemoLibrary
+  DEP_FILE = C:\MPointer\MPointers\DemoApp\DemoLibrary\cmake-build-debug\CMakeFiles\DemoLibrary.dir\MemoryList.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = C:\Users\fmele\Downloads\DemoApp\DemoLibrary\cmake-build-debug\CMakeFiles\DemoLibrary.dir
-  OBJECT_FILE_DIR = C:\Users\fmele\Downloads\DemoApp\DemoLibrary\cmake-build-debug\CMakeFiles\DemoLibrary.dir
+  OBJECT_DIR = C:\MPointer\MPointers\DemoApp\DemoLibrary\cmake-build-debug\CMakeFiles\DemoLibrary.dir
+  OBJECT_FILE_DIR = C:\MPointer\MPointers\DemoApp\DemoLibrary\cmake-build-debug\CMakeFiles\DemoLibrary.dir
 
 
 # =============================================================================
@@ -143,47 +129,47 @@ build C$:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug/CMakeFiles
 
 
 #############################################
-# Link the static library C:\Users\fmele\Downloads\DemoApp\DemoLibrary\cmake-build-debug\libDemoLibrary.a
+# Link the static library C:\MPointer\MPointers\DemoApp\DemoLibrary\cmake-build-debug\libDemoLibrary.a
 
-build C$:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug/libDemoLibrary.a: CXX_STATIC_LIBRARY_LINKER__DemoLibrary_Debug C$:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug/CMakeFiles/DemoLibrary.dir/MPointerGC.cpp.obj C$:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug/CMakeFiles/DemoLibrary.dir/MemoryList.cpp.obj
+build C$:/MPointer/MPointers/DemoApp/DemoLibrary/cmake-build-debug/libDemoLibrary.a: CXX_STATIC_LIBRARY_LINKER__DemoLibrary_Debug C$:/MPointer/MPointers/DemoApp/DemoLibrary/cmake-build-debug/CMakeFiles/DemoLibrary.dir/MPointerGC.cpp.obj C$:/MPointer/MPointers/DemoApp/DemoLibrary/cmake-build-debug/CMakeFiles/DemoLibrary.dir/MemoryList.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = C:\Users\fmele\Downloads\DemoApp\DemoLibrary\cmake-build-debug\CMakeFiles\DemoLibrary.dir
+  OBJECT_DIR = C:\MPointer\MPointers\DemoApp\DemoLibrary\cmake-build-debug\CMakeFiles\DemoLibrary.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = C:\Users\fmele\Downloads\DemoApp\DemoLibrary\cmake-build-debug\libDemoLibrary.a
+  TARGET_FILE = C:\MPointer\MPointers\DemoApp\DemoLibrary\cmake-build-debug\libDemoLibrary.a
   TARGET_PDB = DemoLibrary.a.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
-build C$:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\fmele\Downloads\DemoApp\DemoLibrary\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.2.0.1\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+build C$:/MPointer/MPointers/DemoApp/DemoLibrary/cmake-build-debug/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\MPointer\MPointers\DemoApp\DemoLibrary\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.2.0.1\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
-build C$:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug/edit_cache: phony C$:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug/CMakeFiles/edit_cache.util
+build C$:/MPointer/MPointers/DemoApp/DemoLibrary/cmake-build-debug/edit_cache: phony C$:/MPointer/MPointers/DemoApp/DemoLibrary/cmake-build-debug/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build C$:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\fmele\Downloads\DemoApp\DemoLibrary\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.2.0.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\fmele\Downloads\DemoApp\DemoApp -BC:\Users\fmele\Downloads\DemoApp\DemoApp\cmake-build-debug"
+build C$:/MPointer/MPointers/DemoApp/DemoLibrary/cmake-build-debug/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\MPointer\MPointers\DemoApp\DemoLibrary\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.2.0.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\MPointer\MPointers\DemoApp\DemoApp -BC:\MPointer\MPointers\DemoApp\DemoApp\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build C$:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug/rebuild_cache: phony C$:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug/CMakeFiles/rebuild_cache.util
+build C$:/MPointer/MPointers/DemoApp/DemoLibrary/cmake-build-debug/rebuild_cache: phony C$:/MPointer/MPointers/DemoApp/DemoLibrary/cmake-build-debug/CMakeFiles/rebuild_cache.util
 
 # =============================================================================
 # Target aliases.
 
 build DemoApp: phony DemoApp.exe
 
-build DemoLibrary: phony C$:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug/libDemoLibrary.a
+build DemoLibrary: phony C$:/MPointer/MPointers/DemoApp/DemoLibrary/cmake-build-debug/libDemoLibrary.a
 
-build libDemoLibrary.a: phony C$:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug/libDemoLibrary.a
+build libDemoLibrary.a: phony C$:/MPointer/MPointers/DemoApp/DemoLibrary/cmake-build-debug/libDemoLibrary.a
 
 # =============================================================================
 # Folder targets.
@@ -191,16 +177,16 @@ build libDemoLibrary.a: phony C$:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmak
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/fmele/Downloads/DemoApp/DemoApp/cmake-build-debug
+# Folder: C:/MPointer/MPointers/DemoApp/DemoApp/cmake-build-debug
 
-build all: phony DemoApp.exe C$:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug/all
+build all: phony DemoApp.exe C$:/MPointer/MPointers/DemoApp/DemoLibrary/cmake-build-debug/all
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug
+# Folder: C:/MPointer/MPointers/DemoApp/DemoLibrary/cmake-build-debug
 
-build C$:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug/all: phony C$:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug/libDemoLibrary.a
+build C$:/MPointer/MPointers/DemoApp/DemoLibrary/cmake-build-debug/all: phony C$:/MPointer/MPointers/DemoApp/DemoLibrary/cmake-build-debug/libDemoLibrary.a
 
 # =============================================================================
 # Built-in targets
@@ -209,14 +195,14 @@ build C$:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug/all: phony
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Users/fmele/Downloads/DemoApp/DemoApp/CMakeLists.txt C$:/Users/fmele/Downloads/DemoApp/DemoLibrary/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/MPointer/MPointers/DemoApp/DemoApp/CMakeLists.txt C$:/MPointer/MPointers/DemoApp/DemoLibrary/CMakeLists.txt C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Users/fmele/Downloads/DemoApp/DemoApp/CMakeLists.txt C$:/Users/fmele/Downloads/DemoApp/DemoLibrary/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake: phony
+build C$:/MPointer/MPointers/DemoApp/DemoApp/CMakeLists.txt C$:/MPointer/MPointers/DemoApp/DemoLibrary/CMakeLists.txt C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake: phony
 
 
 #############################################

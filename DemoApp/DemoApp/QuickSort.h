@@ -3,36 +3,55 @@
 
 #include "LinkedList.h"
 
+//NO pude no cambiar los algoritmos de ordenamiento por el swap :))
+
 class QuickSort {
 public:
-    static void QuickSortList(LinkedList& arr, int low, int high) {
-        if (low < high) {
-            int pi = partition(arr, low, high);
-            QuickSortList(arr, low, pi - 1);
-            QuickSortList(arr, pi + 1, high);
-        }
+    static void QuickSortList(LinkedList& list) {
+        size_t listSize = getListSize(list);
+        QuickSortList(list, 0, listSize - 1);
     }
 
 private:
-    static int partition(LinkedList& arr, int low, int high) {
-        int pivot = arr.get(high);
+    static void QuickSortList(LinkedList& list, int low, int high) {
+        if (low < high) {
+            int pi = partition(list, low, high);
+            QuickSortList(list, low, pi - 1);
+            QuickSortList(list, pi + 1, high);
+        }
+    }
+
+    static int partition(LinkedList& list, int low, int high) {
+        int pivot = list.get(high);
         int i = low - 1;
         for (int j = low; j < high; j++) {
-            if (arr.get(j) < pivot) {
+            if (list.get(j) < pivot) {
                 i++;
-                swap(arr, i, j); // Use the swap method
+                swap(list, i, j);
             }
         }
 
-        swap(arr, i + 1, high); // Swap the pivot element to its correct position
+        swap(list, i + 1, high);
         return (i + 1);
     }
 
-    // Swap method that swaps elements at two indices in the LinkedList
-    static void swap(LinkedList& arr, int i, int j) {
-        int temp = arr.get(i);
-        arr.set(i, arr.get(j));
-        arr.set(j, temp);
+    static void swap(LinkedList& list, int i, int j) {
+        int temp = list.get(i);
+        list.set(i, list.get(j));
+        list.set(j, temp);
+    }
+
+    static size_t getListSize(const LinkedList& list) {
+        size_t size = 0;
+        try {
+            while (true) {
+                list.get(size); // Try to access each index
+                ++size;
+            }
+        } catch (const std::out_of_range&) {
+            // Size determined when exception is caught
+        }
+        return size;
     }
 };
 

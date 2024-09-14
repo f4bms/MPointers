@@ -1,4 +1,3 @@
-
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 #include <library.h>
@@ -7,69 +6,61 @@ class Node {
 public:
     int value;
     MPointer<Node> next = nullptr;
+    MPointer<Node> prev = nullptr; // Added prev pointer
 
-    // Default constructor
-    Node() {
-        value = 0;
-        next = nullptr;
-    }
+    Node() : value(0), next(nullptr), prev(nullptr) {}
 
     // Constructor with value
-    Node(int val) {
-        value = val;
-        next = nullptr;
-    }
+    Node(int val) : value(val), next(nullptr), prev(nullptr) {}
 };
 
 class LinkedList {
 public:
-    // Insert a new node at the beginning of the list
     void insert(int value) {
-        MPointer<Node> newNode = MPointer<Node>::New(); // Create a new node
+        MPointer<Node> newNode = MPointer<Node>::New();
         newNode->value = value;
         newNode->next = head;
+
+        if (head) {
+            head->prev = newNode; // Update the previous pointer of the current head
+        }
         head = newNode;
     }
 
     void append(int value) {
-        std::cout << "miau " << value << std::endl;
         MPointer<Node> newNode = MPointer<Node>::New();
         newNode->value = value;
-        std::cout << "Appending value: " << value << std::endl;
 
         if (!head) {
             head = newNode;
-            std::cout << "Head node set to new node" << std::endl;
         } else {
             MPointer<Node> current = head;
             while (current->next) {
                 current = current->next;
             }
             current->next = newNode;
-            std::cout << "New node appended after value: " << current->value << std::endl;
+            newNode->prev = current; // Set the previous pointer of the new node
         }
     }
 
-    // Remove the first node with the specified value
     void remove(int value) {
         MPointer<Node> current = head;
-        MPointer<Node> previous = nullptr;
-
         while (current) {
             if (current->value == value) {
-                if (previous) {
-                    previous->next = current->next;
+                if (current->prev) {
+                    current->prev->next = current->next;
                 } else {
                     head = current->next;
                 }
+                if (current->next) {
+                    current->next->prev = current->prev;
+                }
                 return;
             }
-            previous = current;
             current = current->next;
         }
     }
 
-    // Clear the list
     void clear() {
         while (head) {
             MPointer<Node> temp = head;
@@ -78,7 +69,6 @@ public:
         head = nullptr;
     }
 
-    // Print the list
     void print() const {
         MPointer<Node> current = head;
         while (current) {
@@ -88,7 +78,6 @@ public:
         std::cout << std::endl;
     }
 
-    // Get the value of the node at the specified index
     int get(size_t index) const {
         MPointer<Node> current = head;
         size_t currentIndex = 0;
@@ -102,7 +91,6 @@ public:
         throw std::out_of_range("Index out of range");
     }
 
-    // Set the value of the node at the specified index
     void set(size_t index, int value) {
         MPointer<Node> current = head;
         size_t currentIndex = 0;
@@ -117,11 +105,21 @@ public:
         throw std::out_of_range("Index out of range");
     }
 
+    MPointer<Node> getHead() const { return head; }
+    void setHead(MPointer<Node> newHead) { head = newHead; }
+
+    size_t getSize() const {
+        size_t size = 0;
+        MPointer<Node> current = head;
+        while (current) {
+            ++size;
+            current = current->next;
+        }
+        return size;
+    }
+
 private:
-    MPointer<Node> head = nullptr; // Pointer to the first node
+    MPointer<Node> head = nullptr;
 };
-
-
-
 
 #endif //LINKEDLIST_H

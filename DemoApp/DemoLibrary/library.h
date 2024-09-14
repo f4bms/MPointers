@@ -1,7 +1,6 @@
 #ifndef DEMOLIBRARY_LIBRARY_H
 #define DEMOLIBRARY_LIBRARY_H
 #include "MPointerGC.h"
-//Podría cambiar el memory por otro nombre como internal value
 
 template <typename T>
 class MPointer {
@@ -17,10 +16,8 @@ public:
     }
 
 
-    MPointer(const MPointer<T> &source) {
+    MPointer(const MPointer<T>& source) : memory(source.memory), logicalAddress(source.logicalAddress) {
         std::cout << "MPointer::CopyConstructor()" << std::endl;
-        this->logicalAddress = source.logicalAddress;
-        this->memory = source.memory;
         MPointerGC::getInstance()->incrementRefCount(this->logicalAddress);
     }
 
@@ -28,7 +25,6 @@ public:
         std::cout << "MPointer::destructor()" << std::endl;
         if (memory != nullptr) {
             MPointerGC::getInstance()->decrementRefCount(this->logicalAddress);
-            // No se elimina la memoria aquí, pq se hace en el GC.
         }
     }
 
@@ -39,19 +35,16 @@ public:
             }
             this->memory = other.memory;
             this->logicalAddress = other.logicalAddress;
-            if (this->memory != nullptr) { // Only increment if memory is not nullptr
+            if (this->memory != nullptr) {
                 MPointerGC::getInstance()->incrementRefCount(this->logicalAddress);
             }
         }
         return *this;
     }
 
-    MPointer(const std::nullptr_t nullValue) {
+    MPointer(const std::nullptr_t) : memory(nullptr), logicalAddress(-1) {
         std::cout << "MPointer::Constructor(nullptr)" << std::endl;
-        this->memory = nullptr;
-        this->logicalAddress = -1;
     }
-
 
     MPointer<T>& operator=(std::nullptr_t) {
         if (memory != nullptr) {
@@ -61,7 +54,6 @@ public:
         logicalAddress = -1;
         return *this;
     }
-
 
     MPointer<T>& operator=(const T& value) {
         if (memory != nullptr) {
@@ -74,7 +66,6 @@ public:
         return *memory;
     }
 
-    // Arrow operator to access members of the pointed object
     T* operator->() {
         return memory;
     }
@@ -83,13 +74,12 @@ public:
         return memory != nullptr;
     }
 
-
 private:
     T* memory = nullptr;
     int logicalAddress = -1;
 
     MPointer() = default;
-    MPointer(T* ptr) : memory(ptr) {}
+    MPointer(T* ptr) : memory(ptr), logicalAddress(MPointerGC::getInstance()->registerMemory(ptr)) {}
 
 };
 

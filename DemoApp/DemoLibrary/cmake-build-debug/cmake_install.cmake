@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/fmele/Downloads/DemoApp/DemoLibrary
+# Install script for directory: C:/MPointer/MPointers/DemoApp/DemoLibrary
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

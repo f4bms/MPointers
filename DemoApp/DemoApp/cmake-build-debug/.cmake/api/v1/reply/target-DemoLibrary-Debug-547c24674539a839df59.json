@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "C:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug/libDemoLibrary.a"
+			"path" : "C:/MPointer/MPointers/DemoApp/DemoLibrary/cmake-build-debug/libDemoLibrary.a"
 		}
 	],
 	"backtrace" : 1,
@@ -15,7 +15,7 @@
 		],
 		"files" : 
 		[
-			"C:/Users/fmele/Downloads/DemoApp/DemoLibrary/CMakeLists.txt"
+			"C:/MPointer/MPointers/DemoApp/DemoLibrary/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -55,13 +55,13 @@
 			]
 		}
 	],
-	"id" : "DemoLibrary::@59ada06892b597e42dce",
+	"id" : "DemoLibrary::@5842184deaca3faebd42",
 	"name" : "DemoLibrary",
 	"nameOnDisk" : "libDemoLibrary.a",
 	"paths" : 
 	{
-		"build" : "C:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug",
-		"source" : "C:/Users/fmele/Downloads/DemoApp/DemoLibrary"
+		"build" : "C:/MPointer/MPointers/DemoApp/DemoLibrary/cmake-build-debug",
+		"source" : "C:/MPointer/MPointers/DemoApp/DemoLibrary"
 	},
 	"sourceGroups" : 
 	[
@@ -79,13 +79,13 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "C:/Users/fmele/Downloads/DemoApp/DemoLibrary/MPointerGC.cpp",
+			"path" : "C:/MPointer/MPointers/DemoApp/DemoLibrary/MPointerGC.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "C:/Users/fmele/Downloads/DemoApp/DemoLibrary/MemoryList.cpp",
+			"path" : "C:/MPointer/MPointers/DemoApp/DemoLibrary/MemoryList.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

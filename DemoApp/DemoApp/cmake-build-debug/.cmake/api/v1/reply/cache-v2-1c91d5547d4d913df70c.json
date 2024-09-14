@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/fmele/Downloads/DemoApp/DemoApp/cmake-build-debug"
+			"value" : "c:/MPointer/MPointers/DemoApp/DemoApp/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -575,7 +575,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/fmele/Downloads/DemoApp/DemoApp/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/MPointer/MPointers/DemoApp/DemoApp/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -647,7 +647,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/fmele/Downloads/DemoApp/DemoApp"
+			"value" : "C:/MPointer/MPointers/DemoApp/DemoApp"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1279,7 +1279,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/fmele/Downloads/DemoApp/DemoApp/cmake-build-debug"
+			"value" : "C:/MPointer/MPointers/DemoApp/DemoApp/cmake-build-debug"
 		},
 		{
 			"name" : "DemoApp_IS_TOP_LEVEL",
@@ -1303,7 +1303,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/fmele/Downloads/DemoApp/DemoApp"
+			"value" : "C:/MPointer/MPointers/DemoApp/DemoApp"
 		},
 		{
 			"name" : "DemoLibrary_BINARY_DIR",
@@ -1315,7 +1315,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug"
+			"value" : "C:/MPointer/MPointers/DemoApp/DemoLibrary/cmake-build-debug"
 		},
 		{
 			"name" : "DemoLibrary_IS_TOP_LEVEL",
@@ -1339,43 +1339,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/fmele/Downloads/DemoApp/DemoLibrary"
-		},
-		{
-			"name" : "MPointer_BINARY_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "C:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug"
-		},
-		{
-			"name" : "MPointer_IS_TOP_LEVEL",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "OFF"
-		},
-		{
-			"name" : "MPointer_SOURCE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "C:/Users/fmele/Downloads/DemoApp/DemoLibrary"
+			"value" : "C:/MPointer/MPointers/DemoApp/DemoLibrary"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
