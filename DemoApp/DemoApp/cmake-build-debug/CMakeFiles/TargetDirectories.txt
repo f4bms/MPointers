@@ -1,0 +1,6 @@
+C:/Users/fmele/Downloads/DemoApp/DemoApp/cmake-build-debug/CMakeFiles/DemoApp.dir
+C:/Users/fmele/Downloads/DemoApp/DemoApp/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/fmele/Downloads/DemoApp/DemoApp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug/CMakeFiles/DemoLibrary.dir
+C:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug/CMakeFiles/rebuild_cache.dir

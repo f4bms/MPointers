@@ -1,0 +1,93 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "C:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug/libDemoLibrary.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library"
+		],
+		"files" : 
+		[
+			"C:/Users/fmele/Downloads/DemoApp/DemoLibrary/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 7,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -std=gnu++20 -fdiagnostics-color=always"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "20"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		}
+	],
+	"id" : "DemoLibrary::@59ada06892b597e42dce",
+	"name" : "DemoLibrary",
+	"nameOnDisk" : "libDemoLibrary.a",
+	"paths" : 
+	{
+		"build" : "C:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug",
+		"source" : "C:/Users/fmele/Downloads/DemoApp/DemoLibrary"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/fmele/Downloads/DemoApp/DemoLibrary/MPointerGC.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/fmele/Downloads/DemoApp/DemoLibrary/MemoryList.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

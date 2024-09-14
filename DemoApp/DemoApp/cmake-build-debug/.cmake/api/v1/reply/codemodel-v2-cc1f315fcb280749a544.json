@@ -1,0 +1,102 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "C:/Users/fmele/Downloads/DemoApp/DemoLibrary/cmake-build-debug",
+					"jsonFile" : "directory-Debug-663a6651b5306b0b26ef.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "C:/Users/fmele/Downloads/DemoApp/DemoLibrary",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "DemoApp",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "DemoLibrary",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "DemoApp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DemoApp-Debug-9e0a46f6983816f65b5c.json",
+					"name" : "DemoApp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "DemoLibrary::@59ada06892b597e42dce",
+					"jsonFile" : "target-DemoLibrary-Debug-65de87ec1db954496628.json",
+					"name" : "DemoLibrary",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/fmele/Downloads/DemoApp/DemoApp/cmake-build-debug",
+		"source" : "C:/Users/fmele/Downloads/DemoApp/DemoApp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
