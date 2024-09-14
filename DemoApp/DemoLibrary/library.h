@@ -2,6 +2,8 @@
 #define DEMOLIBRARY_LIBRARY_H
 #include "MPointerGC.h"
 
+//esta es la libreria o clase principal dle proyecto
+
 template <typename T>
 class MPointer {
 public:
