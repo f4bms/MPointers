@@ -9,3 +9,8 @@
 1845	1959	7479921895989792	C:/MPointer/MPointers/DemoApp/DemoLibrary/cmake-build-debug/libDemoLibrary.a	3d896098c46124c5
 15	453	7479933568645568	CMakeFiles/DemoApp.dir/main.cpp.obj	61919c24c54f7755
 453	531	7479933573034918	DemoApp.exe	d15faaf0ce7871d2
+13	497	7479946964105442	CMakeFiles/DemoApp.dir/main.cpp.obj	61919c24c54f7755
+10	953	7479946964082024	C:/MPointer/MPointers/DemoApp/DemoLibrary/cmake-build-debug/CMakeFiles/DemoLibrary.dir/MemoryList.cpp.obj	7c3572037939642c
+5	1074	7479946964027833	C:/MPointer/MPointers/DemoApp/DemoLibrary/cmake-build-debug/CMakeFiles/DemoLibrary.dir/MPointerGC.cpp.obj	a35c6826236105ab
+1074	1180	7479946974721920	C:/MPointer/MPointers/DemoApp/DemoLibrary/cmake-build-debug/libDemoLibrary.a	3d896098c46124c5
+1180	1266	7479946975780020	DemoApp.exe	d15faaf0ce7871d2

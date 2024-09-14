@@ -7,7 +7,7 @@ class InsertionSort {
 public:
     static void Sort(LinkedList& list) {
         if (list.getSize() <= 1) {
-            return; // List is already sorted
+            return;
         }
 
         MPointer<Node> sorted = nullptr;

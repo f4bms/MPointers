@@ -9,12 +9,10 @@
 MPointerGC* MPointerGC::instance = nullptr;
 std::mutex gcMutex;
 
-// Constructor privado
 MPointerGC::MPointerGC() : disposed(false), memoryIdAutoIncrement(0) {
     memoryRegistry = new MemoryList();
 }
 
-// Destructor para limpiar los recursos
 MPointerGC::~MPointerGC() {
     if (!disposed) {
         delete memoryRegistry;
@@ -26,7 +24,6 @@ MPointerGC* MPointerGC::getInstance() {
     if (instance == nullptr) {
         instance = new MPointerGC();
 
-        // Inicia el hilo de limpieza
         pthread_t cleanupThread;
         if (pthread_create(&cleanupThread, nullptr, &cleanupLoop, nullptr) != 0) {
             throw std::runtime_error("Failed to create cleanup thread.");
@@ -39,7 +36,7 @@ MPointerGC* MPointerGC::getInstance() {
 int MPointerGC::registerMemory(void* memory) {
     if (memoryRegistry->contains(memory)) {
         std::cerr << "Memory is already registered!" << std::endl;
-        return memoryRegistry->getId(memory); // Return the existing ID if already registered
+        return memoryRegistry->getId(memory);
     }
 
     int logicalAddress = memoryIdAutoIncrement++;
@@ -58,7 +55,6 @@ void MPointerGC::decrementRefCount(int logical_addr) {
     std::cout << "Decrementing ref count for Logical Address: " << logical_addr << std::endl;
     memoryRegistry->decrementRefCount(logical_addr);
 
-    // Optionally clean up memory if the ref count hits zero
     if (memoryRegistry->getRefCount(logical_addr) == 0) {
         std::cout << "Memory at Logical Address " << logical_addr << " is being freed." << std::endl;
         memoryRegistry->freeMemory(logical_addr);
